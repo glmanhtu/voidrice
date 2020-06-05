@@ -9,7 +9,7 @@ case "$(readlink -f /sbin/init)" in
 esac
 
 cmds="\
-🔒 lock		slock
+🔒 lock		betterlockscreen -l dim --off 5
 🚪 leave dwm	kill -TERM $(pidof -s dwm)
 ♻ renew dwm	kill -HUP $(pidof -s dwm)
 🐻 hibernate	${hib:-sudo -A systemctl suspend-then-hibernate}
